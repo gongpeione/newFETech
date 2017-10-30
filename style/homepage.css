@@ -1,0 +1,38 @@
+
+body {
+    box-sizing: border-box;
+}
+body * {
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+    margin: 60px;
+    color: #333;
+}
+
+ul.list {
+    list-style: none;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+}
+ul.list li {
+  /* width: 25%; */
+}
+ul.list li a {
+    display: block;
+    padding: 1vw 0;
+    background: #195aab;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    text-decoration: none;
+    border-radius: .5vw;
+    box-shadow: 0 3px 10px rgba(80, 131, 232, 0.16);
+    text-align: center;
+}
