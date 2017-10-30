@@ -14,6 +14,7 @@
 
     <meta name="theme-color" content="#363d4c">
 
+    <link rel="stylesheet" href="../style/normalize.css">    
     <link rel="stylesheet" href="../style/console.css">
 
 </head>
@@ -23,11 +24,13 @@
 
     </ul>
 
+    <script src="../js/utils.js"></script>
     <script>
         console.log = function (...args) {
             const consoleTag = document.querySelector('.console');
             args.forEach((msg) => {
-                consoleTag.innerHTML = consoleTag.innerHTML + `<li>${msg}</li>`;
+                const newLine = `<li><span>${type(msg)}</span> ${msg}</li>`;
+                consoleTag.innerHTML = consoleTag.innerHTML + newLine;
             });
         }
     </script>
@@ -35,7 +38,8 @@
     <script type="module">
         // or an inline script
         import module from './module.js';
-        module('Test');
+        module('Test1');
+        module('Test2');
     </script>
         
 </body>
