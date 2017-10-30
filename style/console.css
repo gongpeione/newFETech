@@ -1,4 +1,4 @@
-ul.console {
+#console {
     display: inline-block;
     list-style: none;
     background-color: rgb(43, 55, 80);
@@ -8,13 +8,18 @@ ul.console {
     width: 100%;
     font-size: 14px;
 }
-ul.console li {
+#console li {
     border-bottom: 1px solid rgba(255,255,255,.2);
     padding: 8px 10px;
 }
-ul.console li span {
+#console li span {
     color: rgba(255,255,255,.2);
 }
-ul.console li span::after {
+#console li span::after {
     content: ': ';
+}
+#console li pre {
+    display: inline-block;
+    margin: 0;
+    vertical-align: text-top;
 }
