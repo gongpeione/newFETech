@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout API</title>
+
+    <style>
+        main {
+            display: layout(waterfall); 
+            --padding: 10px;
+            --columns: 4;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <img src="http://via.placeholder.com/350x150">
+        <img src="http://via.placeholder.com/850x150">
+        <img src="http://via.placeholder.com/150x150">
+        <img src="http://via.placeholder.com/350x950">
+        <img src="http://via.placeholder.com/350x550">
+        <img src="http://via.placeholder.com/250x250">
+    </main>
+
+    <script>
+        CSS.registerProperty({
+            name: '--padding',
+            syntax: '<length>',
+            initialValue: '10px'
+        });
+
+        CSS.registerProperty({
+            name: '--columns',
+            syntax: '<number>',
+            initialValue: 4
+        });
+
+        CSS.layoutWorklet.addModule('./js/LayoutAPI.js');
+    </script>
+    
+</body>
+</html>
